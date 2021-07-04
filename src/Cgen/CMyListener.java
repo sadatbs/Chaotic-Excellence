@@ -22,20 +22,25 @@ public class CMyListener extends CBaseListener {
 //        System.out.println("rule entered: " + ctx.getText());
     }
 
-    @Override
-    public void enterFunctionDefinition(CParser.FunctionDefinitionContext ctx) {
-        System.out.println("works");
-    }
+//    @Override
+//    public void enterFunctionDefinition(CParser.FunctionDefinitionContext ctx) {
+//        System.out.println("works");
+//    }
+//
+//    @Override public void exitEveryRule(ParserRuleContext ctx){  //see gramBaseListener for allowed functions
+//        if(ctx.getClass().getName() == "Cgen.CParser$FunctionDefinitionContext"){
+//            scope = "Global";
+//        }
+////        if(ctx.getClass().getName() == "Cgen.CParser$TypeSpecifierContext"){
+////            type = "";
+////        }
+////        if(ctx.getClass().getName() == "Cgen.CParser$DeclaratorContext") {
+////            identifier = "";
+////        }
+//    }
 
-    @Override public void exitEveryRule(ParserRuleContext ctx){  //see gramBaseListener for allowed functions
-        if(ctx.getClass().getName() == "Cgen.CParser$FunctionDefinitionContext"){
-            scope = "Global";
-        }
-//        if(ctx.getClass().getName() == "Cgen.CParser$TypeSpecifierContext"){
-//            type = "";
-//        }
-//        if(ctx.getClass().getName() == "Cgen.CParser$DeclaratorContext") {
-//            identifier = "";
-//        }
+    @Override
+    public void enterDeclarationSpecifier(CParser.DeclarationSpecifierContext ctx) {
+        System.out.println("Woah");
     }
 }
